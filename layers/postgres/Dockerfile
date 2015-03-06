@@ -1,7 +1,6 @@
-FROM postgres:9.3
+FROM kamui/postgresql
 MAINTAINER Søren Kyndi-Wiuff
 
-ADD setup-schema.sh /docker-entrypoint-initdb.d/
-
-
-
+ENV POSTGRESQL_DB=docker
+ENV POSTGRESQL_USER=docker
+ENV POSTGRESQL_PASS=docker
